@@ -1,0 +1,94 @@
+aws
+create vpc---cider-block10.0.0.0/16
+18 clear
+19 as create-vpc --cider-block10.0.0.0/16
+20 aws ec2
+create-vpc--cider-block10.0.0.0/16
+21 aws
+ec2
+create-vpc
+_-cidr-block 10.0.0.0/16
+22 aws ec2 create-subnet -vpc-id vpc-0887706e2afc631e6
+- -cidr-block 10.0.0.0/24
+23
+aws ec2 create-subnet -vpc-id vpc-0887706e2afc631e6 --cidr-block10.0.1.0/24
+24
+aws pc?
+create-internet-gateway
+25
+aws
+ec2 attach-internet-gateway
+--vpc-idvpc-0887706e2afc631e6--internet-gateway-idigw-@a85d01d8e59daf67
+26 1awvs vpc create-route-table--vpc-idvpc-0887706e2afc631e6
+27 aws
+pc create-route-table
+--vpc-idvpc-0887706e2afc631e6
+28 as ec2 create-route-table
+--vpc-idvpc-0887706e2afc631e6
+29 alvs ec2 create-route
+30 as ec2 create-route
+--route-table-idrtb-0e3d6c08e5ff64€83
+- -destination-cidr-block0.0.0.0/0 --gateway-idigw-0a85d01d8e59daf67
+-route-table-idrtb-0e3d6c08e5ff64c83
+--destination-cidr-block0.0.0.0/0
+-internet-gateway-idigw-0a85d01d8e59daf67
+31 aWs
+ec2 create-route
+--route-table-idrtb-0e3d6c08e5ff64c83
+32 aws
+ec2 describe-route-table
+--destination-cidr-block0.0.0.0/0
+--gateway-idigw-0a85d01d8e59daf67
+-route-tabe-idrtb-0e3d6c08e5ff64c83
+33 aws
+ec2 associate-route-table
+34
+- - subnet-id subnet-0b70da0cffbc87ac5
+-route-table id rtb-rtb-0e3d6c08e5ff64€83
+alvs ec2 associate-route-table
+- - subnet-id subnet-0b70da@cffbc87ac5
+- -route-table id rtb-le3d6c08e5ff64c83
+35 als
+ec2 associate-route-table
+-subnet-id subnet-Ob70da@cffbc87ac5 .
+-route-table-idrtb-0e3d6c08e5ff64083
+36 alws ec2 modify-subnet-attribute --subnet-id subnet-0b70da@cffbc87ac5
+-map-public-ip-on-lanuch
+37 as ec2 modify-subnet-attribute
+-subnet-id subnet-0b70da@cffbc87ac5
+--map-public-ip-on-launch
+38 aivs ec2 create-key-pair
+--key-namemykeypair
+_-query
+"keymatrial*
+-output text › mykey kk.pem
+39 as ec2 create-key-pair
+--key-name mykeypair
+--query
+"keymatrial'
+-output text › mykey pair.Dem
+40 aws ec2 create-key-pair
+-key-name mykeypair
+--query
+keymaterial*
+-output text › mykeypair.pem
+41 chmod 400 mykeypair.pem
+42 chmod 400 mykeypair.pem
+43 awS
+44 aws chmod 400 mykeypair.pem
+45
+as ec2 create-security-group
+--group-name ssh access
+--description
+"security group for ssh access"
+- -vpc-id vpc-0887706e2afc631e6
+46 aws ec2 create-security-group
+- -group-name sshAccess
+-description
+"security group tor ssh access
+-vpc-id vpc-0887706e2afc631e6
+47aws ec2 authorize-security-group-ingress
+-group-id sg-097cd894014fd9524 - -protocol tp --port22
+--cidr0.0.0.0/0
+48 aws
+ec2 authorize-security-group-ingress--group-idsg-097cd894014fd9524--protocoltep--port22--cidr0.0.0.0/0
